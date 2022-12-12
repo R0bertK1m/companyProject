@@ -1,0 +1,278 @@
+@charset "utf-8";
+*{
+    padding: 0; 
+    margin: 0; 
+    list-style: none; 
+    text-decoration: none;
+}/*여백 없음, 리스트 점 및 링크 밑줄 없앰*/
+img{
+    vertical-align: top; 
+    border: 0;
+}/*이미지상단정렬 및 테두리 없앰*/
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #222;
+}
+/*상기 초기화 작업은 반드시 해주어야 한다.*/
+a{
+    color: #222;
+    font-size: 15px;
+    line-height: 20px;
+}
+.wrap{
+    width: 100%;
+    min-width: 1240px;
+}
+.header{
+    height: 80px;
+}
+
+.header_in{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    height: 80px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a{
+    background-color: greenyellow;
+    background-image: url(../img/logo.gif);
+    display: block;
+    width: 138px;
+    height: 20px;
+    text-indent: -2222px;
+}/*백그라운드 이미지로 로고를 삽입해봄*/
+
+.header_in ul{display: flex;}
+/*a태그의 글자색은 반드시 a태그에서 변경해야 함.*/
+.header_in li a:hover{color: darkmagenta; text-decoration: underline;}
+.header .gnb{
+    margin-left: 50px;
+}
+.gnb li{margin-right: 60px;}
+.gnb li a{
+    font-size: 18px; 
+    color: #222;
+}
+
+.login li a{
+    color: #222;
+    margin-left: 15px;
+}
+/* 여기서도 url을 활용해서 이미지를 삽입함. 텍스트 처리는 덤 */
+.login .btnsc a{
+    display: block;
+    width: 22px;
+    height: 20px;
+    background-image: url(../img/icon_search.png);
+    background-repeat: no-repeat;
+    text-indent: -2222px;
+
+}
+
+.login .btncart a{
+    display: block;
+    width: 22px;
+    height: 20px;
+    background-image: url(../img/icon_cart.png);
+    background-repeat: no-repeat;
+    text-indent: -2222px;
+}
+
+/*----------- 메인페이지 시작 -----------*/
+
+.main1{
+    height: 480px;
+    position: relative;
+    overflow: hidden;/*해당 공간밖에 내용을 보이지 않게 함*/
+}
+.main1img{
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    margin-left: -800px;
+}
+
+.main1img a{
+    display: block;
+    width: 1600px;
+    height: 480px;
+    background-image: url(../img/mainSlide.jpg);
+}
+
+.main2{
+    width: 1200px;
+    margin: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main2img1 a{
+    display: block;
+    width: 590px;
+    height: 194px;
+    background-image: url(../img/mainBn2.jpg);
+}
+.main2img2 a{
+    display: block;
+    width: 590px;
+    height: 194px;
+    background-image: url(../img/mainBn11.jpg);
+}
+
+.main3{
+    width: 1200px;
+    margin: 0px auto;
+}
+
+.main3b1{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+/* 여기도 220915 url에서 활용 p태그와 a태그의 차이 */
+/* .main3b1 .more{
+    background-color: bisque;
+    width: 100px;
+} */
+
+.main3b1 .more a{
+    background-color: aliceblue;
+    padding-right: 16px;
+    background-image: url(../img/icon_plus.png);
+    background-repeat: no-repeat;
+    background-position: right 0 center;
+}/* 백그라운드 리핏과 포지션을 이용해서 이미지 위치 조정 */
+
+.main3 h2{
+    font-size: 24px;
+    line-height: 24px;
+}
+.main3 h2 span{font-weight: normal;}
+.main3b1 p:last-child{font-size: 16px;}
+.main3b1 img{vertical-align: baseline; margin-left: 3px;}
+
+.main3b2 ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+.main3b2 ul li{
+    width: 285px;
+    height: 400px;
+    text-align: center;
+    position: relative;
+}
+
+.main3b2 ul li p{font-weight: 700;}
+
+.main3b2 ul img{
+    width: 100%;
+    border: 1px solid #999;
+}
+.main3b2 ul .money{
+    width: 12px;
+    vertical-align: baseline;
+    border: none;
+    margin-right: 3px;
+}
+.itembrand, .itemname{margin: 10px;}
+.itemprice{position: absolute; bottom: 0; left: 50%; margin-left: -30px;}
+
+/*-------- main4 --------*/
+
+.main4{
+    width: 1200px;
+    margin: 40px auto;
+}
+
+.main4 ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+.main4 ul li{
+    width: 380px;
+}
+
+.main4 ul li a{
+    position: relative;
+}
+
+.main4 ul li p:last-child{
+    position: absolute;
+    top: 50%;
+    margin-top: -18px;
+    margin-left: 20px;
+    width: 180px;
+    height: 100px;
+    font-size: 14px;
+    
+}
+
+/*------ 푸터 ------*/
+
+.footerout{
+    border-top: 2px solid #999;
+}
+
+.footer{
+    width: 1200px;
+    margin: 40px auto;
+    position: relative;
+}
+
+.footer .fm1 ul{
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.footer .fm1 li{
+    margin: 0 10px;
+}
+
+.footer .fm1 .point a{
+    color: red;
+}
+
+.fm2 .mar{
+    margin: 0px 15px;
+}
+
+.fm2 .bar{
+    margin: 10px;
+    font-size: 10px;
+    color: #999;
+}
+
+.footer .fm3{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.fm3 p{
+    margin-bottom: 10px;
+}
+
+.fm3 p img{
+    vertical-align: baseline;
+    margin-left: 3px;
+}
+
+.fm3 .kg{
+    width: 79px;
+    height: 40px;
+    background-image: url(../img/inicis.png);
+}
+.fm3 p a{
+    color: #222;
+    padding-right: 10px;
+    background-image: url(../img/arrow01.png);
+    background-repeat: no-repeat;
+    background-position: right 0 center;
+}

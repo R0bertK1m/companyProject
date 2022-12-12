@@ -1,0 +1,225 @@
+@charset "utf-8";
+*{
+    padding: 0; 
+    margin: 0; 
+    list-style: none; 
+    text-decoration: none;
+}/*여백 없음, 리스트 점 및 링크 밑줄 없앰*/
+img{
+    vertical-align: top; 
+    border: 0;
+}/*이미지상단정렬 및 테두리 없앰*/
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 13px;
+    line-height: 20px;
+    color: #222;
+}
+a{
+    font-size: 13px;
+    line-height: 20px;
+}
+/*상기 초기화 작업은 반드시 해주어야 한다.*/
+
+.wrap{
+    width: 100%;
+    min-width: 1240px;
+}
+.header{
+    height: 80px;
+}
+
+.header_in{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    height: 80px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_in ul{display: flex;}
+/*a태그의 글자색은 반드시 a태그에서 변경해야 함.*/
+.header_in li a:hover{color: darkmagenta; text-decoration: underline;}
+.header .gnb{
+    margin-left: 50px;
+}
+.gnb li{margin-right: 60px;}
+.gnb li a{
+    font-size: 18px; 
+    color: #222;
+}
+
+.login li a{
+    color: #222;
+    margin-left: 15px;
+}
+
+/*----------- 메인페이지 시작 -----------*/
+
+.main1{
+    height: 480px;
+    position: relative;
+    overflow: hidden;/*해당 공간밖에 내용을 보이지 않게 함*/
+}
+.main1img{
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    margin-left: -800px;
+}
+/*
+    main1img의 이미지 너비값이 안전사이즈보다 넓음.
+    그래서 강제로 중앙 정령을 위해 포지션을 사용함
+    메인1의 하나뿐인 자식인 main1img가 앱솔루트로 메인의 안에서 벗어나서
+    세로 높이 값이 없어 졋으므로 메인1에 높이 값을 줘서 0이 아니게 함.
+    브라우저 너비보다 더 큰 이미지 때문에 생기는 스크롤을 처리하기 위해
+    메인1에 overflow:hidden을 설정.
+    이렇게 설정 할 시 안전사이즈보다 작아진다면 main1img의 이미지가 잘려 표시되며
+    배치에 문제가 생기므로 전체 영역에서 최소 너비값min-width를 설정함.
+*/
+/*----------- 메인2 시작 -----------*/
+
+.main2{
+    width: 1200px;
+    margin: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*----------- 메인3 시작 -----------*/
+/* 
+    css를 시작할때 바디태그에 적용한 기본 줄높이가 20ㅔㅌ임
+    폰트의 기본 높이값 = 줄높이
+    폰트사이즈가 더 커지면 글자가 위,아래의 
+    영역이 겹쳐지므로 줄높이도 같이 수정해야함
+*/
+
+.main3{
+    width: 1200px;
+    margin: 0px auto;
+}
+
+.main3b1{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.main3 h2{
+    font-size: 24px;
+    line-height: 24px;
+}
+.main3 h2 span{font-weight: normal;}
+.main3b1 p:last-child{font-size: 16px;}
+.main3b1 img{vertical-align: baseline; margin-left: 3px;}
+
+.main3b2 ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+.main3b2 ul li{
+    width: 285px;
+    height: 400px;
+    text-align: center;
+    position: relative;
+}
+
+.main3b2 ul li p{font-weight: 700;}
+
+.main3b2 ul img{
+    width: 100%;
+    border: 1px solid #999;
+}
+.main3b2 ul .money{
+    width: 12px;
+    vertical-align: baseline;
+    border: none;
+    margin-right: 3px;
+}
+.itembrand, .itemname{margin: 10px;}
+.itemprice{position: absolute; bottom: 0; left: 50%; margin-left: -30px;}
+
+/*-------- main4 --------*/
+
+.main4{
+    width: 1200px;
+    margin: 40px auto;
+}
+
+.main4 ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+.main4 ul li{
+    width: 380px;
+}
+
+.main4 ul li a{
+    position: relative;
+}
+
+.main4 ul li p:last-child{
+    position: absolute;
+    top: 50%;
+    margin-top: -18px;
+    margin-left: 20px;
+    width: 180px;
+    height: 100px;
+    font-size: 14px;
+    
+}
+
+/*------ 푸터 ------*/
+
+.footerout{
+    border-top: 2px solid #999;
+}
+
+.footer{
+    width: 1200px;
+    margin: 40px auto;
+    position: relative;
+}
+
+.footer .fm1 ul{
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.footer .fm1 li{
+    margin: 0 10px;
+}
+
+.footer .fm1 .point a{
+    color: red;
+}
+
+.fm2 .mar{
+    margin: 0px 15px;
+}
+
+.fm2 .bar{
+    margin: 10px;
+    font-size: 10px;
+    color: #999;
+}
+
+.footer .fm3{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.fm3 p{
+    margin-bottom: 10px;
+}
+
+.fm3 p img{
+    vertical-align: baseline;
+    margin-left: 3px;
+}
